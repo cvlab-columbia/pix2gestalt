@@ -1,5 +1,5 @@
 # pix2gestalt: Amodal Segmentation by Synthesizing Wholes
-### In Submission
+### CVPR 2024
 ### [Project Page](https://gestalt.cs.columbia.edu/)  | [Paper](https://arxiv.org/pdf/2401.14398.pdf) | [arXiv](https://arxiv.org/abs/2401.14398) | [Weights](https://huggingface.co/cvlab/pix2gestalt-weights)
 
 [pix2gestalt: Amodal Segmentation by Synthesizing Wholes](https://gestalt.cs.columbia.edu/)  
@@ -11,7 +11,6 @@
 
 ## Updates
 - Our paper is now available on [arXiv](https://arxiv.org/abs/2401.14398)! 
-- Pre-trained weights and preliminary Gradio demo coming soon.
 - Stay tuned for the release of our training & inference scripts!
 
 ## Citation
