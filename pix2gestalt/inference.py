@@ -10,7 +10,7 @@ from torchvision import transforms
 from contextlib import nullcontext
 import sys
 from ldm.models.diffusion.ddim import DDIMSampler
-from ldm.util import load_and_preprocess, instantiate_from_config
+from ldm.util import instantiate_from_config
 
 def load_model_from_config(config, ckpt, device, verbose=False):
     global closure_device
