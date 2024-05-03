@@ -9,7 +9,7 @@
 ![teaser](./assets/teaser.gif "Teaser")
 
 ## Updates
-- We have released our [training script](https://github.com/cvlab-columbia/pix2gestalt#training), [dataset](https://github.com/cvlab-columbia/pix2gestalt#dataset), and [Gradio demo](https://github.com/cvlab-columbia/pix2gestalt#inference-and-weights) with inference instructions.
+- We have released our [training script](https://github.com/cvlab-columbia/pix2gestalt?tab=readme-ov-file#training), [dataset](https://github.com/cvlab-columbia/pix2gestalt?tab=readme-ov-file#dataset), and [Gradio demo](https://github.com/cvlab-columbia/pix2gestalt?tab=readme-ov-file#inference-and-weights) with inference instructions.
 - Custom training & fine-tuning instructions coming soon. Beyond amodal perception, our repository can also be used to fine-tune Stable Diffusion in an image-conditioned manner with spatial prompts, such as binary masks.
 - Pretrained models are released on [Huggingface](https://huggingface.co/cvlab/pix2gestalt-weights), more details provided [here](https://github.com/cvlab-columbia/pix2gestalt#inference-and-weights).  
 - pix2gestalt was accepted to CVPR 2024, available on [arXiv](https://arxiv.org/abs/2401.14398)!
@@ -36,7 +36,7 @@ https://huggingface.co/cvlab/pix2gestalt-weights/tree/main
 
 wget -c -P ./ckpt https://gestalt.cs.columbia.edu/assets/epoch=000005.ckpt
 ```
-Note that we have released 2 model weights: epoch=000005.ckpt and epoch=000010.ckpt. By default, we use epoch=000005.ckpt which is the checkpoint after finetuning for 5 epochs on our [dataset](https://github.com/cvlab-columbia/pix2gestalt#dataset). We have also released epoch=000010.ckpt, trained for 10 epochs. This checkpoint can be desirable for synthetic occlusion settings (given our dataset approach), though it may naturally suffer in zero-shot generalization compared to our default model.
+Note that we have released 2 model weights: epoch=000005.ckpt and epoch=000010.ckpt. By default, we use epoch=000005.ckpt which is the checkpoint after finetuning for 5 epochs on our [dataset](https://github.com/cvlab-columbia/pix2gestalt?tab=readme-ov-file#dataset). We have also released epoch=000010.ckpt, trained for 10 epochs. This checkpoint can be desirable for synthetic occlusion settings (given our dataset approach), though it may naturally suffer in zero-shot generalization compared to our default model.
 
 Download [SAM](https://segment-anything.com/) checkpoints:
 ```
@@ -54,13 +54,13 @@ Note that this app uses 22-28 GB of VRAM, so it may not be possible to run it on
 For inference without the Gradio demo, we provide standalone functionality for each component [here](./pix2gestalt/inference.py), encapsulated by the [run_pix2gestalt](./pix2gestalt/inference.py#L138) method. It supports both predicted modal masks from SAM (like our demo) or ground truth modal masks. 
 
 ### Training
-Download the image-conditioned Stable Diffusion diffusion checkpoint released by Lambda Labs: 
+Download the image-conditioned Stable Diffusion checkpoint released by Lambda Labs: 
 
 ```
 wget -c -P ./ckpt https://gestalt.cs.columbia.edu/assets/sd-image-conditioned-v2.ckpt
 ```
 
-Then, download our fine-tuning dataset via the instructions [here](https://github.com/cvlab-columbia/pix2gestalt#dataset) and update its path (see `data:params:root_dir`) in our [config](./pix2gestalt/configs/sd-finetune-pix2gestalt-c_concat-256.yaml).
+Then, download our fine-tuning dataset via the instructions [here](https://github.com/cvlab-columbia/pix2gestalt?tab=readme-ov-file#dataset) and update its path (see `data:params:root_dir`) in our [config](./pix2gestalt/configs/sd-finetune-pix2gestalt-c_concat-256.yaml).
 
 Run training command:  
 ```
